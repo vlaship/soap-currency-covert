@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://tempuri.org/"
+           targetNamespace="http://tempuri.org/"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetConversionRate">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CurrencyFrom" type="xs:string"/>
+                <xs:element name="CurrencyTo" type="xs:string"/>
+                <xs:element name="RateDate" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetConversionRateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="GetConversionRateResult" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getLocalRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="amount" type="xs:decimal"/>
+                <xs:element name="currencyFrom" type="xs:string"/>
+                <xs:element name="currencyTo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getLocalResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="amount" type="xs:decimal"/>
+                <xs:element name="currency" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

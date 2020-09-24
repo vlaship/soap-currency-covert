@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: soap
+  main:
+    banner-mode: 'off'
+logging:
+  level:
+    org:
+      springframework:
+        ws: trace
+server:
+  port: 8080
+ws:
+  uri: org.tempuri
+  path: http://currencyconverter.kowabunga.net/converter.asmx
+  protocol: SOAP 1.2 Protocol
+  xsd: soap
+  port: SoapPort
+  currencies: rub, eur, usd
